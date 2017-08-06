@@ -18,20 +18,136 @@
 	width: 150000px;
 	height: 11px;
 	background-image: url(images/roadLines.png);
-	z-index: 2;
+	z-index: 3;
 }
 
 #programmingLanguageBanner
 {
 	position:fixed;
-	left:1000px;
+	left:5000px;
 	bottom: 83px;	    
 	width: 500px;
 	height: 800px;
-	background-image: url(images/programmingLanguageBanner.png);
+	background-image: url(images/programmingLanguagesBanner.png);
 	background-size: 100% 100%;
 	z-index: 3;
 }
+
+#versatileSoftwareEngineerBanner
+{
+	position:fixed;
+	left:1200px;
+	bottom: 83px;	    
+	width: 500px;
+	height: 800px;
+	background-image: url(images/versatileSoftwareEngineerBanner.png);
+	background-size: 100% 100%;
+	z-index: 3;
+}
+
+#databasesSign
+{
+	position:fixed;
+	left:1900;
+	bottom: -650px;	    
+	width: 300px;
+	height: 700px;
+	background-image: url(images/databasesSign.png);
+	background-size: 100% 100%;
+	z-index: 2;
+	transition: bottom 0.5s linear;
+}
+
+#codeSign
+{
+	position:fixed;
+	left:2160px;
+	bottom: -650px;	     
+	width: 300px;
+	height: 700px;
+	background-image: url(images/codeSign.png);
+	background-size: 100% 100%;
+	z-index: 2;
+	transition: bottom 0.5s linear;
+}
+
+#requirementsAnalysisSign
+{
+	position:fixed;
+	left:2420px;
+	bottom: -550px;	 	    
+	width: 300px;
+	height: 600px;
+	background-image: url(images/requirementsAnalysisSign.png);
+	background-size: 100% 100%;
+	z-index: 2;
+	transition: bottom 0.5s linear;
+}
+
+#testAutomationSign
+{
+	position:fixed;
+	left: 2680px;
+	bottom: -550px;	 	    
+	width: 300px;
+	height: 600px;
+	background-image: url(images/testAutomationSign.png);
+	background-size: 100% 100%;
+	z-index: 2;
+	transition: bottom 0.5s linear;
+}
+
+#ironBar-1
+{
+	position:fixed;
+	left: 1900px;
+	bottom: 699px;	 	    
+	width: 1080px;
+	height: 10px;
+	background-image: url(images/ironBar.png);
+	background-size: 100% 100%;
+	z-index: 1;
+}
+
+
+#ironBar-2
+{
+	position:fixed;
+	left: 1900px;
+	bottom: 545px;	 	    
+	width: 1080px;
+	height: 10px;
+	background-image: url(images/ironBar.png);
+	background-size: 100% 100%;
+	z-index: 1;
+}
+
+#ironBar-3
+{
+	position:fixed;
+	left: 1900px;
+	bottom: 391px;	 	    
+	width: 1080px;
+	height: 10px;
+	background-image: url(images/ironBar.png);
+	background-size: 100% 100%;
+	z-index: 1;
+}
+
+
+#ironBar-4
+{
+	position:fixed;
+	left: 1900px;
+	bottom: 237px;	 	    
+	width: 1080px;
+	height: 10px;
+	background-image: url(images/ironBar.png);
+	background-size: 100% 100%;
+	z-index: 1;
+}
+
+
 
 .fireHydrant
 {
@@ -42,20 +158,20 @@
 	height: 80px;
 	background-image: url(images/fireHydrant.png);
 	background-size: 100% 100%;
-	z-index: 2;
+	z-index: 3;
 }
 
 
 .streetLight
 {
 	position:fixed;
-	left:1400px;
+	left:-650px;
 	bottom: 73px;	    
 	width: 400px;
 	height: 600px;
 	background-image: url(images/streetLight.png);
 	background-size: 100% 100%;
-	z-index: 2;
+	z-index: 3;
 }
 
 #carSmoke
@@ -68,7 +184,7 @@
 	height: 50px;
 	background-image: url(images/carSmoke.gif);
 	background-size: 100% 100%;
-	z-index: 4;
+	z-index: 5;
 	transition: opacity 0.5s linear;
 }
 
@@ -81,7 +197,7 @@
 	height: 140px;
 	background-image: url(images/car.png);
 	background-size: 100% 100%;
-	z-index: 4;
+	z-index: 5;
 }
 
 #carShadow
@@ -93,7 +209,7 @@
 	height: 73px;
 	background-image: url(images/carShadow.png);
 	background-size: 100% 100%;
-	z-index: 2;
+	z-index: 3;
 }
 
 #road
@@ -105,7 +221,7 @@
 	height: 83px;
 	background-image: url(images/road.png);
 	background-size: 100% 100%;
-	z-index: 1;
+	z-index: 3;
 }
 
 #leftWheel
@@ -117,7 +233,7 @@
 	padding-top:15%;
 	background-image: url(images/wheel.png);
 	background-size: 100% 100%;
-	z-index: 4;	
+	z-index: 5;	
 	transition: bottom 0.1s ease-in-out;
 }
 #rightWheel
@@ -129,7 +245,7 @@
 	padding-top:15%;
 	background-image: url(images/wheel.png);
 	background-size: 100% 100%;
-	z-index: 4;	
+	z-index: 5;	
 	transition: bottom 0.1s ease-in-out;
 }
 
@@ -167,58 +283,49 @@ html, body {
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: Helvetica, Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	font-family: Helvetica, Arial, sans-serif;
 }
+
 
 
 .loader {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: #BDBDBD;
-  z-index: 100000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: #606060;
+	z-index: 100000;
 }
 
 #resumeTitleText {
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  cursor: pointer;
-  border: none;
-  font: normal 72px/normal "Passero One", Helvetica, sans-serif;
-  color: rgba(255,255,255,1);
-  text-align: center;
-  -o-text-overflow: clip;
-  text-overflow: clip;
-  text-shadow: 0 1px 0 rgb(204,204,204) , 0 2px 0 rgb(201,201,201) , 0 3px 0 rgb(187,187,187) , 0 4px 0 rgb(185,185,185) , 0 5px 0 rgb(170,170,170) , 0 6px 1px rgba(0,0,0,0.0980392) , 0 0 5px rgba(0,0,0,0.0980392) , 0 1px 3px rgba(0,0,0,0.298039) , 0 3px 5px rgba(0,0,0,0.2) , 0 5px 10px rgba(0,0,0,0.247059) , 0 10px 10px rgba(0,0,0,0.2) , 0 20px 20px rgba(0,0,0,0.14902) ;
-  -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
-  -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
-  -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
-  transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	cursor: pointer;
+	border: none;
+	font: normal 72px/normal "Passero One", Helvetica, sans-serif;
+	color: rgba(255,255,255,1);
+	text-align: center;
+	-o-text-overflow: clip;
+	text-overflow: clip;
+	text-shadow: 0 1px 0 rgb(204,204,204) , 0 2px 0 rgb(201,201,201) , 0 3px 0 rgb(187,187,187) , 0 4px 0 rgb(185,185,185) , 0 5px 0 rgb(170,170,170) , 0 6px 1px rgba(0,0,0,0.0980392) , 0 0 5px rgba(0,0,0,0.0980392) , 0 1px 3px rgba(0,0,0,0.298039) , 0 3px 5px rgba(0,0,0,0.2) , 0 5px 10px rgba(0,0,0,0.247059) , 0 10px 10px rgba(0,0,0,0.2) , 0 20px 20px rgba(0,0,0,0.14902) ;
+	-webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+	-moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+	-o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+	transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
 }
 
 #resumeTitleText:hover {
-  color: #424242;
-  text-shadow: 0 1px 0 rgba(255,255,255,1) , 0 2px 0 rgba(255,255,255,1) , 0 3px 0 rgba(255,255,255,1) , 0 4px 0 rgba(255,255,255,1) , 0 5px 0 rgba(255,255,255,1) , 0 6px 1px rgba(0,0,0,0.0980392) , 0 0 5px rgba(0,0,0,0.0980392) , 0 1px 3px rgba(0,0,0,0.298039) , 0 3px 5px rgba(0,0,0,0.2) , 0 -5px 10px rgba(0,0,0,0.247059) , 0 -7px 10px rgba(0,0,0,0.2) , 0 -15px 20px rgba(0,0,0,0.14902) ;
-  -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
-  -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
-  -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
-  transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
-}
-
-h2 {
-  text-transform: uppercase;
-  animation: pulse 0.3s linear 0s infinite alternate;
-}
-
-@keyframes pulse {
-  from { opacity: 1; }
-  to { opacity: 0.3; }
+	color:  #828282;
+	text-shadow: 0 1px 0 rgba(255,255,255,1) , 0 2px 0 rgba(255,255,255,1) , 0 3px 0 rgba(255,255,255,1) , 0 4px 0 rgba(255,255,255,1) , 0 5px 0 rgba(255,255,255,1) , 0 6px 1px rgba(0,0,0,0.0980392) , 0 0 5px rgba(0,0,0,0.0980392) , 0 1px 3px rgba(0,0,0,0.298039) , 0 3px 5px rgba(0,0,0,0.2) , 0 -5px 10px rgba(0,0,0,0.247059) , 0 -7px 10px rgba(0,0,0,0.2) , 0 -15px 20px rgba(0,0,0,0.14902) ;
+	-webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+	-moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+	-o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+	transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
 }

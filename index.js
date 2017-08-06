@@ -1,3 +1,22 @@
+var m_w = 7239174321;
+var m_z = 987654321;
+var mask = 0xffffffff;
+
+function seed(i) {
+    m_w = i;
+    m_z = 987654321;
+}
+
+function random() {
+    m_z = (36969 * (m_z & 65535) + (m_z >> 16)) & mask;
+    m_w = (18000 * (m_w & 65535) + (m_w >> 16)) & mask;
+    var result = ((m_z << 16) + m_w) & mask;
+    result /= 4294967296;
+    return result + 0.5;
+}
+
+seed(119142112);
+
 disableScroll();
 var objectsInitialised = false
 $(this).scrollTop(0);
@@ -14,20 +33,31 @@ function fillObjectArray() {
     addElement("sky", 0.05)
     addElement("programmingLanguageBanner", 0.5)
 
-    addElement("streetLight-0", 0.5)
     addElement("fireHydrant-0", 0.5)
+
+    addElement("streetLight-0", 0.5)
+    addElement("versatileSoftwareEngineerBanner", 0.5)
+    addElement("codeSign", 0.5)
+    addElement("databasesSign", 0.5)
+    addElement("requirementsAnalysisSign", 0.5)
+    addElement("testAutomationSign", 0.5)
+    addElement("ironBar-1", 0.5)
+    addElement("ironBar-2", 0.5)
+    addElement("ironBar-3", 0.5)
+    addElement("ironBar-4", 0.5)
+
     for (i = 1; i < 50; i++) {
 
         var newFireHydrant = $('#fireHydrant-' + (i - 1)).clone();
         newFireHydrant.attr('id', "fireHydrant-" + i)
         newFireHydrant.appendTo(document.body)
         newFireHydrant.css('left', (newFireHydrant.get(0).getBoundingClientRect().left += Math.random() * 5000 + 1000) + "px");
-        addElement("fireHydrant-" + i, 0.5)
+        addElement("fireHydrant-" + i, 0.5)        
 
-        var newFireHydrant = $('#streetLight-' + (i - 1)).clone();
-        newFireHydrant.attr('id', "streetLight-" + i)
-        newFireHydrant.appendTo(document.body)
-        newFireHydrant.css('left', (newFireHydrant.get(0).getBoundingClientRect().left += Math.random() * 2000 + 600) + "px");
+        var newStreeLight = $('#streetLight-' + (i - 1)).clone();
+        newStreeLight.attr('id', "streetLight-" + i)
+        newStreeLight.appendTo(document.body)
+        newStreeLight.css('left', (newStreeLight.get(0).getBoundingClientRect().left += random() * 2000 + 600) + "px");
         addElement("streetLight-" + i, 0.5)
     }
 
@@ -62,15 +92,26 @@ function moveDivs(tempX) {
             document.getElementById("rightWheel").style.bottom = "0px";
         }, 100);
     }
+
+    if(tempX>2550)
+    {
+        document.getElementById("databasesSign").style.bottom = "75px";
+        if (tempX > 2860) {
+            document.getElementById("codeSign").style.bottom = "75px";
+            if (tempX > 3170) {
+                document.getElementById("requirementsAnalysisSign").style.bottom = "0px";
+                if (tempX > 3420) {
+                    document.getElementById("testAutomationSign").style.bottom = "0px";
+                }
+            }
+        }
+    }
 }
 
 $(window).scroll(function (event) {
     //First time it is called is just to initialise everything, don't move car
     if (objectsInitialised) {
         document.getElementById("instructions").style.visibility = 'hidden';
-        setTimeout(function () {
-            document.getElementById("resumeTitle").style.top = '0px';
-        }, 500);
         document.getElementById("carSmoke").style.opacity = '1';
         setTimeout(function () {
             document.getElementById("carSmoke").style.opacity = "0";
@@ -138,3 +179,4 @@ function enableScroll() {
     window.ontouchmove = null;
     document.onkeydown = null;
 }
+
