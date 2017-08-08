@@ -15,7 +15,7 @@ function random() {
     return result + 0.5;
 }
 
-seed(119142112);
+seed(6);
 
 disableScroll();
 var objectsInitialised = false
@@ -31,11 +31,11 @@ var tempY = 0;
 function fillObjectArray() {
     addElement("roadLines", 0.5)
     addElement("sky", 0.05)
-    addElement("programmingLanguageBanner", 0.5)
 
     addElement("fireHydrant-0", 0.5)
-
     addElement("streetLight-0", 0.5)
+    addElement("circulationLight-0", 0.5)
+
     addElement("versatileSoftwareEngineerBanner", 0.5)
     addElement("codeSign", 0.5)
     addElement("databasesSign", 0.5)
@@ -45,6 +45,32 @@ function fillObjectArray() {
     addElement("ironBar-2", 0.5)
     addElement("ironBar-3", 0.5)
     addElement("ironBar-4", 0.5)
+    addElement("expert", 0.5)
+    addElement("advanced", 0.5)
+    addElement("intermediate", 0.5)
+    addElement("beginner", 0.5)
+    addElement("tallguy", 0.5)
+    addElement("tallText", 0.5)
+    addElement("openSwimText", 0.5)
+    addElement("openSwimSign", 0.5)
+    addElement("kayakerText", 0.5)
+    addElement("kayakerSign", 0.5)
+
+    addElement("programmingLanguageBanner", 0.5)
+    addElement("ironBar-5", 0.5)
+    addElement("ironBar-6", 0.5)
+    addElement("ironBar-7", 0.5)
+    addElement("ironBar-8", 0.5)
+    addElement("expert-2", 0.5)
+    addElement("advanced-2", 0.5)
+    addElement("intermediate-2", 0.5)
+    addElement("beginner-2", 0.5)
+    addElement("CSharpSign", 0.5)
+    addElement("SQLSign", 0.5)
+    addElement("vbnetSign", 0.5)
+    addElement("javaSign", 0.5)
+    addElement("javascriptsign", 0.5)
+    addElement("ccplusplusSign", 0.5)
 
     for (i = 1; i < 50; i++) {
 
@@ -54,11 +80,18 @@ function fillObjectArray() {
         newFireHydrant.css('left', (newFireHydrant.get(0).getBoundingClientRect().left += Math.random() * 5000 + 1000) + "px");
         addElement("fireHydrant-" + i, 0.5)        
 
-        var newStreeLight = $('#streetLight-' + (i - 1)).clone();
-        newStreeLight.attr('id', "streetLight-" + i)
-        newStreeLight.appendTo(document.body)
-        newStreeLight.css('left', (newStreeLight.get(0).getBoundingClientRect().left += random() * 2000 + 600) + "px");
+        var newstreetLight = $('#streetLight-' + (i - 1)).clone();
+        newstreetLight.attr('id', "streetLight-" + i)
+        newstreetLight.appendTo(document.body)
+        newstreetLight.css('left', (newstreetLight.get(0).getBoundingClientRect().left += random() * 2000 + 600) + "px");
         addElement("streetLight-" + i, 0.5)
+
+
+        var newcirculationLight = $('#circulationLight-' + (i - 1)).clone();
+        newcirculationLight.attr('id', "circulationLight-" + i)
+        newcirculationLight.appendTo(document.body)
+        newcirculationLight.css('left', (newcirculationLight.get(0).getBoundingClientRect().left += random() * 4000 + 5000) + "px");
+        addElement("circulationLight-" + i, 0.5)
     }
 
 } 
@@ -93,18 +126,49 @@ function moveDivs(tempX) {
         }, 100);
     }
 
-    if(tempX>2550)
+    if(tempX>2500)
     {
-        document.getElementById("databasesSign").style.bottom = "75px";
-        if (tempX > 2860) {
-            document.getElementById("codeSign").style.bottom = "75px";
-            if (tempX > 3170) {
+        document.getElementById("databasesSign").style.bottom = "57px";
+        if (tempX > 2810) {
+            document.getElementById("codeSign").style.bottom = "57px";
+            if (tempX > 3120) {
                 document.getElementById("requirementsAnalysisSign").style.bottom = "0px";
-                if (tempX > 3420) {
+                if (tempX > 3380) {
                     document.getElementById("testAutomationSign").style.bottom = "0px";
                 }
             }
         }
+    }
+
+    if (tempX > 12950) {
+        document.getElementById("CSharpSign").style.bottom = "57px";
+        if (tempX > 13260) {
+            document.getElementById("SQLSign").style.bottom = "57px";
+            if (tempX > 13570) {
+                document.getElementById("vbnetSign").style.bottom = "57px";
+                if (tempX > 13880) {
+                    document.getElementById("javaSign").style.bottom = "0px";
+                    if (tempX > 14190) {
+                        document.getElementById("javascriptsign").style.bottom = "0px";
+                        if (tempX > 14500) {
+                            document.getElementById("ccplusplusSign").style.bottom = "0px";
+                        }
+                    }
+                }
+            }
+        }
+    }
+    if (tempX > 6900) {
+        document.getElementById("openSwimSign").style.bottom = "-275px";
+
+    }
+    if (tempX > 8100) {
+        document.getElementById("tallguy").style.bottom = "64px";
+
+    }
+    if (tempX > 8900) {
+        document.getElementById("kayakerSign").style.bottom = "-275px";
+
     }
 }
 
@@ -179,4 +243,3 @@ function enableScroll() {
     window.ontouchmove = null;
     document.onkeydown = null;
 }
-

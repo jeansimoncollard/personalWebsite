@@ -21,17 +21,7 @@
 	z-index: 3;
 }
 
-#programmingLanguageBanner
-{
-	position:fixed;
-	left:5000px;
-	bottom: 83px;	    
-	width: 500px;
-	height: 800px;
-	background-image: url(images/programmingLanguagesBanner.png);
-	background-size: 100% 100%;
-	z-index: 3;
-}
+
 
 #versatileSoftwareEngineerBanner
 {
@@ -97,6 +87,35 @@
 	transition: bottom 0.5s linear;
 }
 
+#expert{
+	position:fixed;
+	left: 1825px;
+	font-size:50px;
+	bottom:710px;	
+}
+#advanced{
+	position:fixed;
+	left: 1825px;
+	font-size:50px;
+	bottom:545px;	
+}
+
+#intermediate{
+	position:fixed;
+	left: 1825px;
+	font-size:50px;
+	bottom:391px;	
+}
+
+#beginner{
+	position:fixed;
+	left: 1825px;
+	font-size:50px;
+	bottom:237px;	
+}
+
+
+
 #ironBar-1
 {
 	position:fixed;
@@ -147,7 +166,249 @@
 	z-index: 1;
 }
 
+#openSwimText
+{
+	position:fixed;
+	left: 4340px;
+	font-size:50px;
+	bottom:250px;
+	text-align: center;
+	width: 200px;	
+}
 
+#openSwimSign{
+	position:fixed;
+	left: 4300px;
+	bottom: -900px;	 	    
+	width: 500px;
+	height: 1000px;
+	background-image: url(images/openSwimSign.png);
+	background-size: 100% 100%;
+	z-index: 2;
+	transition: bottom 1.1s linear;
+}
+
+#tallText{	
+	position:fixed;
+	left: 4925px;
+	font-size:50px;
+	bottom:200px;
+	width: 200px;	
+}
+
+
+#tallguy
+{
+	position:fixed;
+	left: 5000px;
+	bottom: -1500px;	 	    
+	width: 207px;
+	height: 1535px;
+	background-image: url(images/tallguy.png);
+	background-size: 100% 100%;
+	z-index: 2;
+	transition: bottom 7s ease-out;
+}
+
+#kayakerText
+{
+	position:fixed;
+	left: 5500px;
+	font-size:50px;
+	bottom:200px;
+	text-align: center;
+	width: 200px;	
+}
+
+
+#kayakerSign{
+	position:fixed;
+	left: 5435px;
+	bottom: -900px;	 	    
+	width: 500px;
+	height: 1000px;
+	background-image: url(images/kayakerSign.png);
+	background-size: 100% 100%;
+	z-index: 2;
+	transition: bottom 1.1s linear;
+}
+
+#programmingLanguageBanner
+{
+	position:fixed;
+	left:6400px;
+	bottom: 83px;	    
+	width: 500px;
+	height: 800px;
+	background-image: url(images/programmingLanguagesBanner.png);
+	background-size: 100% 100%;
+	z-index: 3;
+}
+
+#expert-2{
+	position:fixed;
+	left: 7050px;
+	font-size:50px;
+	bottom:710px;	
+}
+#advanced-2{
+	position:fixed;
+	left: 7050px;
+	font-size:50px;
+	bottom:545px;	
+}
+
+#intermediate-2{
+	position:fixed;
+	left: 7050px;
+	font-size:50px;
+	bottom:391px;	
+}
+
+#beginner-2{
+	position:fixed;
+	left: 7050px;
+	font-size:50px;
+	bottom:237px;	
+}
+
+
+
+#ironBar-5
+{
+	position:fixed;
+	left: 7125px;
+	bottom: 699px;	 	    
+	width: 1600px;
+	height: 10px;
+	background-image: url(images/ironBar.png);
+	background-size: 100% 100%;
+	z-index: 1;
+}
+
+
+#ironBar-6
+{
+	position:fixed;
+	left: 7125px;
+	bottom: 545px;	 	    
+	width: 1600px;
+	height: 10px;
+	background-image: url(images/ironBar.png);
+	background-size: 100% 100%;
+	z-index: 1;
+}
+
+#ironBar-7
+{
+	position:fixed;
+	left: 7125px;
+	bottom: 391px;	 	    
+	width: 1600px;
+	height: 10px;
+	background-image: url(images/ironBar.png);
+	background-size: 100% 100%;
+	z-index: 1;
+}
+
+
+#ironBar-8
+{
+	position:fixed;
+	left: 7125px;
+	bottom: 237px;	 	    
+	width: 1600px;
+	height: 10px;
+	background-image: url(images/ironBar.png);
+	background-size: 100% 100%;
+	z-index: 1;
+}
+
+#CSharpSign
+{
+	position:fixed;
+	left:7125px;
+	bottom: -650px;	    
+	width: 300px;
+	height: 700px;
+	background-image: url(images/CSharpSign.png);
+	background-size: 100% 100%;
+	z-index: 2;
+	transition: bottom 0.5s linear;
+}
+
+#SQLSign
+{
+	position:fixed;
+	left:7385px;
+	bottom: -650px;	     
+	width: 300px;
+	height: 700px;
+	background-image: url(images/SQLSign.png);
+	background-size: 100% 100%;
+	z-index: 2;
+	transition: bottom 0.5s linear;
+}
+
+#vbnetSign
+{
+	position:fixed;
+	left:7645px;
+	bottom: -550px;	 	    
+	width: 300px;
+	height: 700px;
+	background-image: url(images/vbnetSign.png);
+	background-size: 100% 100%;
+	z-index: 2;
+	transition: bottom 0.5s linear;
+}
+
+#javaSign
+{
+	position:fixed;
+	left: 7905px;
+	bottom: -550px;	 	    
+	width: 300px;
+	height: 600px;
+	background-image: url(images/javaSign.png);
+	background-size: 100% 100%;
+	z-index: 2;
+	transition: bottom 0.5s linear;
+}
+
+#javascriptsign
+{
+	position:fixed;
+	left: 8165px;
+	bottom: -550px;	 	    
+	width: 300px;
+	height: 600px;
+	background-image: url(images/javascriptsign.png);
+	background-size: 100% 100%;
+	z-index: 2;
+	transition: bottom 0.5s linear;
+}
+
+#ccplusplusSign
+{
+	position:fixed;
+	left: 8425;
+	bottom: -550px;	 	    
+	width: 300px;
+	height: 600px;
+	background-image: url(images/ccplusplusSign.png);
+	background-size: 100% 100%;
+	z-index: 2;
+	transition: bottom 0.5s linear;
+}
+
+/** In the way of programming languages*/
+#streetLight-7{
+	visibility: hidden
+}
+#streetLight-8{
+	visibility: hidden
+}
 
 .fireHydrant
 {
@@ -161,11 +422,24 @@
 	z-index: 3;
 }
 
+.circulationLight
+{
+	position:fixed;
+	left:3320px;
+	bottom: 82px;	    
+	width: 426px;
+	height: 533px;
+	background-image: url(images/circulationlight.png);
+	background-size: 100% 100%;
+	z-index: 3;
+}
+
+
 
 .streetLight
 {
 	position:fixed;
-	left:-650px;
+	left:-2450px;
 	bottom: 73px;	    
 	width: 400px;
 	height: 600px;
@@ -329,3 +603,13 @@ body {
 	-o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
 	transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
 }
+
+h1{
+	margin: 0;
+	text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
+	font-weight: 600;
+	line-height: 48px;
+	height: 48px;
+}
+
+
