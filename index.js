@@ -163,7 +163,7 @@ function moveDivs(tempX) {
 
     }
     if (tempX > 8100) {
-        document.getElementById("tallguy").style.bottom = "64px";
+        document.getElementById("tallguy").style.bottom = "63px";
 
     }
     if (tempX > 8900) {
