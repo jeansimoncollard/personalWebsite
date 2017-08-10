@@ -354,7 +354,7 @@
 {
 	position:fixed;
 	left:7645px;
-	bottom: -550px;	 	    
+	bottom: -650px;	 	    
 	width: 300px;
 	height: 700px;
 	background-image: url(images/vbnetSign.png);
@@ -410,6 +410,135 @@
 	visibility: hidden
 }
 
+#truck
+{
+	position:fixed;
+	left: 18800px;
+	bottom: 82px;	 	    
+	width: 800px;
+	height: 300px;
+	background-image: url(images/truck.png);
+	background-size: 100% 100%;
+	z-index: 4;
+	transition: bottom 0.5s linear;
+}
+
+#udesConsultat
+{
+	position:fixed;
+	left: 19038px;
+	bottom: 190px;	 	    
+	z-index: 4;
+	transition: bottom 0.5s linear;
+}
+
+
+#truck-2
+{
+	position:fixed;
+	left: 20300px;
+	bottom: 82px;	 	    
+	width: 800px;
+	height: 300px;
+	background-image: url(images/truck.png);
+	background-size: 100% 100%;
+	z-index: 4;
+	transition: bottom 0.5s linear;
+}
+
+#databaseLoader
+{
+	position:fixed;
+	left: 20538px;
+	bottom: 210px;	 	    
+	z-index: 4;
+	transition: bottom 0.5s linear;
+}
+
+#truck-3
+{
+	position:fixed;
+	left: 21800px;
+	bottom: 82px;	 	    
+	width: 800px;
+	height: 300px;
+	background-image: url(images/truck.png);
+	background-size: 100% 100%;
+	z-index: 4;
+	transition: bottom 0.5s linear;
+}
+
+#smusInternship
+{
+	position:fixed;
+	left: 22038px;
+	bottom: 160px;	 	    
+	z-index: 4;
+	transition: bottom 0.5s linear;
+}
+
+#truck-4
+{
+	position:fixed;
+	left: 23300px;
+	bottom: 82px;	 	    
+	width: 800px;
+	height: 300px;
+	background-image: url(images/truck.png);
+	background-size: 100% 100%;
+	z-index: 4;
+	transition: bottom 0.5s linear;
+}
+
+#desjardinsInternship
+{
+	position:fixed;
+	left: 23538px;
+	bottom: 210px;	 	    
+	z-index: 4;
+	transition: bottom 0.5s linear;
+}
+
+.truckDiv>p {
+	font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+	font-size: 30px;
+	text-align: center;
+	text-rendering: optimizeLegibility;
+	margin: 5px;
+	font-weight: bold;
+	width: 470px;
+	z-index: 4;
+}
+.truckDiv>p>a {
+	text-decoration:none;
+	color:#131313;
+	z-index: 4;
+}
+
+.truckDiv>p>a:hover {
+	color:  #545454;
+	-webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+	-moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+	-o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+	transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+	z-index: 4;
+}
+.truckDiv>p.elegantshadow {
+	color: #131313;
+	letter-spacing: .15em;
+	text-shadow: 1px -1px 0 #767676, -1px 2px 1px #8f8e8d, -2px 4px 1px #b7b6b5, -3px 6px 1px #dbdad9, -4px 8px 1px #e4e3e2;
+}
+.truckDiv>p.insetshadow {
+	color: #202020;
+}
+
+/*In the way of trucks*/
+#streetLight-9{
+	visibility: hidden;
+}
+
+
+
 .fireHydrant
 {
 	position:fixed;
@@ -434,8 +563,6 @@
 	z-index: 3;
 }
 
-
-
 .streetLight
 {
 	position:fixed;
@@ -459,7 +586,7 @@
 	background-image: url(images/carSmoke.gif);
 	background-size: 100% 100%;
 	z-index: 5;
-	transition: opacity 0.5s linear;
+	transition: opacity 0.5s linear, bottom 0.1s ease-in;;
 }
 
 #car
@@ -472,6 +599,7 @@
 	background-image: url(images/car.png);
 	background-size: 100% 100%;
 	z-index: 5;
+	transition: bottom 0.1s ease-in;
 }
 
 #carShadow
@@ -484,6 +612,7 @@
 	background-image: url(images/carShadow.png);
 	background-size: 100% 100%;
 	z-index: 3;
+	transition: bottom 0.1s ease-in;
 }
 
 #road
@@ -525,7 +654,7 @@
 
 #instructions
 {
-	width: 335px;
+	width: 220px;
 	height: 20px;
 	position:fixed;
 	top:0;
@@ -536,6 +665,12 @@
 	margin: auto;
 	color:#0B3B17;
 	z-index:1000;
+}
+
+/**In the way of instructions*/
+#streetLight-3
+{
+	visibility: hidden;
 }
 
 .blink {

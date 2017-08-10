@@ -71,6 +71,14 @@ function fillObjectArray() {
     addElement("javaSign", 0.5)
     addElement("javascriptsign", 0.5)
     addElement("ccplusplusSign", 0.5)
+    addElement("truck", 1)
+    addElement("udesConsultat", 1)
+    addElement("truck-2", 1)
+    addElement("databaseLoader", 1)
+    addElement("truck-3", 1)
+    addElement("smusInternship", 1)
+    addElement("truck-4", 1)
+    addElement("desjardinsInternship", 1)
 
     for (i = 1; i < 50; i++) {
 
@@ -126,31 +134,31 @@ function moveDivs(tempX) {
         }, 100);
     }
 
-    if(tempX>2500)
+    if(tempX>2300)
     {
         document.getElementById("databasesSign").style.bottom = "57px";
-        if (tempX > 2810) {
+        if (tempX > 2610) {
             document.getElementById("codeSign").style.bottom = "57px";
-            if (tempX > 3120) {
+            if (tempX > 2920) {
                 document.getElementById("requirementsAnalysisSign").style.bottom = "0px";
-                if (tempX > 3380) {
+                if (tempX > 3180) {
                     document.getElementById("testAutomationSign").style.bottom = "0px";
                 }
             }
         }
     }
 
-    if (tempX > 12950) {
+    if (tempX > 12850) {
         document.getElementById("CSharpSign").style.bottom = "57px";
-        if (tempX > 13260) {
+        if (tempX > 13160) {
             document.getElementById("SQLSign").style.bottom = "57px";
-            if (tempX > 13570) {
+            if (tempX > 13470) {
                 document.getElementById("vbnetSign").style.bottom = "57px";
-                if (tempX > 13880) {
+                if (tempX > 13780) {
                     document.getElementById("javaSign").style.bottom = "0px";
-                    if (tempX > 14190) {
+                    if (tempX > 14090) {
                         document.getElementById("javascriptsign").style.bottom = "0px";
-                        if (tempX > 14500) {
+                        if (tempX > 14400) {
                             document.getElementById("ccplusplusSign").style.bottom = "0px";
                         }
                     }
@@ -168,7 +176,17 @@ function moveDivs(tempX) {
     }
     if (tempX > 8900) {
         document.getElementById("kayakerSign").style.bottom = "-275px";
+    }
 
+    if (tempX > 17850) {
+        document.getElementById("carSmoke").style.bottom = "60px";
+        document.getElementById("car").style.bottom = "30px";
+        document.getElementById("carShadow").style.bottom = "-40px";
+    }
+    else {
+        document.getElementById("carSmoke").style.bottom = "110px";
+        document.getElementById("car").style.bottom = "80px";
+        document.getElementById("carShadow").style.bottom = "-10px";
     }
 }
 
