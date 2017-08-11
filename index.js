@@ -41,6 +41,7 @@ function fillObjectArray() {
     addElement("databasesSign", 0.5)
     addElement("requirementsAnalysisSign", 0.5)
     addElement("testAutomationSign", 0.5)
+    addElement("cookingSign", 0.5)
     addElement("ironBar-1", 0.5)
     addElement("ironBar-2", 0.5)
     addElement("ironBar-3", 0.5)
@@ -134,31 +135,34 @@ function moveDivs(tempX) {
         }, 100);
     }
 
-    if(tempX>2300)
+    if(tempX>1900)
     {
         document.getElementById("databasesSign").style.bottom = "57px";
         if (tempX > 2610) {
             document.getElementById("codeSign").style.bottom = "57px";
-            if (tempX > 2920) {
+            if (tempX > 3120) {
                 document.getElementById("requirementsAnalysisSign").style.bottom = "0px";
-                if (tempX > 3180) {
+                if (tempX > 3680) {
                     document.getElementById("testAutomationSign").style.bottom = "0px";
+                    if (tempX > 4100) {
+                        document.getElementById("cookingSign").style.bottom = "-312px";
+                    }
                 }
             }
         }
     }
 
-    if (tempX > 12850) {
+    if (tempX > 12550) {
         document.getElementById("CSharpSign").style.bottom = "57px";
-        if (tempX > 13160) {
+        if (tempX > 13010) {
             document.getElementById("SQLSign").style.bottom = "57px";
-            if (tempX > 13470) {
+            if (tempX > 13450) {
                 document.getElementById("vbnetSign").style.bottom = "57px";
-                if (tempX > 13780) {
+                if (tempX > 13880) {
                     document.getElementById("javaSign").style.bottom = "0px";
-                    if (tempX > 14090) {
+                    if (tempX > 14420) {
                         document.getElementById("javascriptsign").style.bottom = "0px";
-                        if (tempX > 14400) {
+                        if (tempX > 14880) {
                             document.getElementById("ccplusplusSign").style.bottom = "0px";
                         }
                     }
@@ -186,7 +190,7 @@ function moveDivs(tempX) {
     else {
         document.getElementById("carSmoke").style.bottom = "110px";
         document.getElementById("car").style.bottom = "80px";
-        document.getElementById("carShadow").style.bottom = "-10px";
+        document.getElementById("carShadow").style.bottom = "10px";
     }
 }
 
