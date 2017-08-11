@@ -178,17 +178,17 @@ function moveDivs(tempX) {
         document.getElementById("tallguy").style.bottom = "63px";
 
     }
-    if (tempX > 8900) {
+    if (tempX > 9300) {
         document.getElementById("kayakerSign").style.bottom = "-275px";
     }
 
     if (tempX > 17850) {
-        document.getElementById("carSmoke").style.bottom = "60px";
+        document.getElementById("carSmoke").style.bottom = "70px";
         document.getElementById("car").style.bottom = "30px";
         document.getElementById("carShadow").style.bottom = "-40px";
     }
     else {
-        document.getElementById("carSmoke").style.bottom = "110px";
+        document.getElementById("carSmoke").style.bottom = "120px";
         document.getElementById("car").style.bottom = "80px";
         document.getElementById("carShadow").style.bottom = "10px";
     }
