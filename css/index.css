@@ -416,7 +416,7 @@
 
 #udesConsultat {
 	position: fixed;
-	left: 19153px;
+	left: 19133px;
 	bottom: 240px;
 	z-index: 4;
 	transition: bottom 0.5s linear;
@@ -436,7 +436,7 @@
 
 #databaseLoader {
 	position: fixed;
-	left: 20653px;
+	left: 20633px;
 	bottom: 260px;
 	z-index: 4;
 	transition: bottom 0.5s linear;
@@ -456,8 +456,8 @@
 
 #smusInternship {
 	position: fixed;
-	left: 22153px;
-	bottom: 210px;
+	left: 22133px;
+	bottom: 190px;
 	z-index: 4;
 	transition: bottom 0.5s linear;
 }
@@ -476,7 +476,7 @@
 
 #desjardinsInternship {
 	position: fixed;
-	left: 23653px;
+	left: 23633px;
 	bottom: 260px;
 	z-index: 4;
 	transition: bottom 0.5s linear;
@@ -489,7 +489,7 @@
 	text-rendering: optimizeLegibility;
 	margin: 5px;
 	font-weight: bold;
-	width: 470px;
+	width: 510px;
 	z-index: 4;
 }
 
@@ -526,6 +526,30 @@
 #streetLight-10 {
 	visibility: hidden;
 }
+
+#finishLine {
+	position: fixed;
+	left: 14000px;
+	bottom: -197px;
+	width: 372px;
+	height: 790px;
+	background-image: url(../img/finishLine.png);
+	background-size: 100% 100%;
+	z-index: 4;
+	transition: bottom 0.5s linear;
+}
+#finishLinePole {
+	position: fixed;
+	left: 14000px;
+	bottom: -197px;
+	width: 372px;
+	height: 790px;
+	background-image: url(../img/finishLinePole.png);
+	background-size: 100% 100%;
+	z-index: 160;
+	transition: bottom 0.5s linear;
+}
+
 
 .fireHydrant {
 	position: fixed;
@@ -668,7 +692,7 @@ div {
 html, body {
 	max-width: 100%;
 	overflow-x: hidden;
-	height: 27000px;
+	height: 29250px;
 }
 
 body {

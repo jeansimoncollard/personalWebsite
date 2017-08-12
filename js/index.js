@@ -117,7 +117,9 @@ function fillObjectArray(options) {
 		{id : "truck-3", factor : bigFactor},
 		{id : "smusInternship", factor : bigFactor},
 		{id : "truck-4", factor : bigFactor},
-		{id : "desjardinsInternship", factor : bigFactor}
+		{id : "desjardinsInternship", factor : bigFactor},
+		{id : "finishLine", factor : smallFactor},
+		{id : "finishLinePole", factor : smallFactor}
 	];
 	_.each(objects, function(object) {
 		addElement(object.id, object.factor);
