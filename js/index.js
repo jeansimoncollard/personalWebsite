@@ -140,7 +140,7 @@ function newFireHydrants(amount) {
         var newFireHydrant = $('#fireHydrant-' + (i - 1)).clone();
         newFireHydrant.attr('id', "fireHydrant-" + i);
         newFireHydrant.appendTo($('.content'));
-        newFireHydrant.css('left', (newFireHydrant.get(0).getBoundingClientRect().left += Math.random() * 5000 + 1000) + "px");
+        newFireHydrant.css('left', (parseInt((newFireHydrant.css('left'))) + Math.random() * 5000 + 1000) + "px");
         addElement("fireHydrant-" + i, 0.5);
     }
 }
@@ -154,7 +154,7 @@ function newStreetLights(amount) {
         var newstreetLight = $('#streetLight-' + (i - 1)).clone();
         newstreetLight.attr('id', "streetLight-" + i);
         newstreetLight.appendTo($('.content'));
-        newstreetLight.css('left', (newstreetLight.get(0).getBoundingClientRect().left += random() * 2000 + 600) + "px");
+        newstreetLight.css('left', (parseInt((newstreetLight.css('left'))) + random() * 2000 + 600) + "px");
         addElement("streetLight-" + i, 0.5);
     }
 }
@@ -168,7 +168,7 @@ function newCirculationLight(amount) {
         var newcirculationLight = $('#circulationLight-' + (i - 1)).clone();
         newcirculationLight.attr('id', "circulationLight-" + i);
         newcirculationLight.appendTo($('.content'));
-        newcirculationLight.css('left', (newcirculationLight.get(0).getBoundingClientRect().left += random() * 4000 + 5000) + "px");
+        newcirculationLight.css('left', (parseInt((newcirculationLight.css('left'))) + random() * 4000 + 5000) + "px");
         addElement("circulationLight-" + i, 0.5);
     }
 }
@@ -180,7 +180,7 @@ function newCirculationLight(amount) {
  */
 function addElement(id, factor) {
     var divToAdd = document.getElementById(id);
-    var xPosition = divToAdd.getBoundingClientRect().left;
+    var xPosition = parseInt($(divToAdd).css('left'));
     var arrayToAdd = new Array();
     arrayToAdd.push(divToAdd, xPosition, factor);
     objectArray.push(arrayToAdd);
@@ -282,8 +282,7 @@ function resizeEventHandler() {
 
     $("#carSmoke").css({
         position: "fixed",
-        bottom: (pos.bottom + 25) + "px",
-        left: (pos.left - 32) + "px"
+        bottom: (pos.bottom + 25) + "px"
     }).show();
 }
 
