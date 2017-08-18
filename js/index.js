@@ -6,6 +6,8 @@ var keys = { 37: 1, 38: 1, 39: 1, 40: 1 };
 var tempX = 0; // unused?
 var tempY = 0; // unused?
 var objectArray = [];
+var hammerGuyAnimationStarted = false
+var lastTempX = 0
 
 $(document).ready(function () {
     seed(6);
@@ -70,6 +72,8 @@ function fillObjectArray(options) {
     var bigFactor = options && options.bigFactor ? options.bigfactor : 1;
 
     var objects = [
+        { id: "hammerGuy", factor: smallFactor },
+        { id: "cobolSign", factor: smallFactor },
 		{ id: "roadLines", factor: smallFactor },
 		{ id: "sky", factor: smallFactor },
 		{ id: "fireHydrant-0", factor: smallFactor },
@@ -191,6 +195,7 @@ function addElement(id, factor) {
  * @param {type} description of param {type} description of param tempX
  */
 function moveDivs(tempX) {
+    lastTempX = tempX;
     for (var i = 0; i < objectArray.length; i++) {
         var yourDivPositionX = objectArray[i][1] - objectArray[i][2] * tempX;
         objectArray[i][0].style.left = yourDivPositionX + "px";
@@ -222,6 +227,13 @@ function moveDivs(tempX) {
                     document.getElementById("testAutomationSign").style.bottom = "30px";
                     if (tempX > 4100) {
                         document.getElementById("cookingSign").style.bottom = "-280px";
+                        if (tempX > 4490) {
+                            if (!hammerGuyAnimationStarted) {
+                                document.getElementById("cobolSign").style.bottom = "-180px";
+                                recursiveHammerGuyAnimation();
+                                hammerGuyAnimationStarted = true;
+                            }
+                        }
                     }
                 }
             }
@@ -267,6 +279,48 @@ function moveDivs(tempX) {
         document.getElementById("carSmoke").style.bottom = "120px";
         document.getElementById("car").style.bottom = "80px";
         document.getElementById("carShadow").style.bottom = "10px";
+    }
+}
+
+//Could not use conventional css transition on jquery animate with this kind of project
+function recursiveHammerGuyAnimation() {
+    if (objectArray[0][1] > objectArray[1][1] + 65) { //Element at index 0 of objectArray is hammerGuy and at index 1 is cobolsign
+        setTimeout(function () {
+            objectArray[0][1] = objectArray[0][1] - 15;
+            var yourDivPositionX = objectArray[0][1] - objectArray[0][2] * lastTempX;;
+            objectArray[0][0].style.left = yourDivPositionX + "px";
+            recursiveHammerGuyAnimation();
+        }, 25);
+    }
+    else {
+        document.getElementById("cobolSign").style.transition = "bottom .05s linear";
+        setTimeout(function () {
+            document.getElementById("cobolSign").style.bottom = (parseInt($("#cobolSign").css('bottom')) - 35) + "px";
+            setTimeout(function () {
+                document.getElementById("cobolSign").style.bottom = (parseInt($("#cobolSign").css('bottom')) - 35) + "px";
+                setTimeout(function () {
+                    setTimeout(function () {
+                        document.getElementById("cobolSign").style.bottom = (parseInt($("#cobolSign").css('bottom')) - 35) + "px";
+                    }, 1700);
+                    document.getElementById("cobolSign").style.transition = "bottom .3s linear";
+                    document.getElementById("cobolSign").style.bottom = (parseInt($("#cobolSign").css('bottom')) - 240) + "px";
+                    setTimeout(function () {
+                        recursiveHammerGuyAnimationSecondPart();
+                    }, 1000);                    
+                }, 1700);
+            }, 1700);
+        }, 300);
+    }
+}
+
+function recursiveHammerGuyAnimationSecondPart() {
+    if (objectArray[0][1] > -600) { //Element at index 0 of objectArray is hammerGuy and at index 1 is cobolsign
+        setTimeout(function () {
+            objectArray[0][1] = objectArray[0][1] - 15;
+            var yourDivPositionX = objectArray[0][1] - objectArray[0][2] * lastTempX;;
+            objectArray[0][0].style.left = yourDivPositionX + "px";
+            recursiveHammerGuyAnimationSecondPart();
+        }, 25);
     }
 }
 
