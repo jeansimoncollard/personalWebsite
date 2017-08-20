@@ -6,8 +6,7 @@ var keys = { 37: 1, 38: 1, 39: 1, 40: 1 };
 var tempX = 0; // unused?
 var tempY = 0; // unused?
 var objectArray = [];
-var hammerGuyAnimationStarted = false
-var lastTempX = 0
+var lastTempX = 0;
 
 $(document).ready(function () {
     seed(6);
@@ -39,6 +38,21 @@ $(document).ready(function () {
 
     $('#resumeTitleText').click(function () {
         $('.loader').fadeOut();
+        var audioElement = document.createElement('audio');
+        audioElement.setAttribute('src', 'sounds/startingengine.ogg');
+        audioElement.volume = 1;
+        audioElement.play();
+
+        setTimeout(function () {
+            var audioElement2 = document.createElement('audio');
+            audioElement2.setAttribute('src', 'sounds/backgroundsound.ogg');
+            audioElement2.volume = .1
+            audioElement2.play();
+            audioElement2.addEventListener('ended', function () {
+                this.currentTime = 0;
+                this.play();
+            });
+        }, 1000);
         enableScroll();
     });
 });
@@ -72,60 +86,58 @@ function fillObjectArray(options) {
     var bigFactor = options && options.bigFactor ? options.bigfactor : 1;
 
     var objects = [
-        { id: "hammerGuy", factor: smallFactor },
-        { id: "cobolSign", factor: smallFactor },
-		{ id: "roadLines", factor: smallFactor },
-		{ id: "sky", factor: smallFactor },
-		{ id: "fireHydrant-0", factor: smallFactor },
-		{ id: "streetLight-0", factor: smallFactor },
-		{ id: "circulationLight-0", factor: smallFactor },
-		{ id: "versatileSoftwareEngineerBanner", factor: smallFactor },
-		{ id: "codeSign", factor: smallFactor },
-		{ id: "databasesSign", factor: smallFactor },
-		{ id: "requirementsAnalysisSign", factor: smallFactor },
-		{ id: "testAutomationSign", factor: smallFactor },
-		{ id: "cookingSign", factor: smallFactor },
-		{ id: "ironBar-1", factor: smallFactor },
-		{ id: "ironBar-2", factor: smallFactor },
-		{ id: "ironBar-3", factor: smallFactor },
-		{ id: "ironBar-4", factor: smallFactor },
-		{ id: "expert", factor: smallFactor },
-		{ id: "advanced", factor: smallFactor },
-		{ id: "intermediate", factor: smallFactor },
-		{ id: "beginner", factor: smallFactor },
-		{ id: "tallguy", factor: smallFactor },
-		{ id: "tallText", factor: smallFactor },
-		{ id: "openSwimText", factor: smallFactor },
-		{ id: "openSwimSign", factor: smallFactor },
-		{ id: "kayakerText", factor: smallFactor },
-		{ id: "kayakerSign", factor: smallFactor },
-		{ id: "programmingLanguageBanner", factor: smallFactor },
-		{ id: "ironBar-5", factor: smallFactor },
-		{ id: "ironBar-6", factor: smallFactor },
-		{ id: "ironBar-7", factor: smallFactor },
-		{ id: "ironBar-8", factor: smallFactor },
-		{ id: "expert-2", factor: smallFactor },
-		{ id: "advanced-2", factor: smallFactor },
-		{ id: "intermediate-2", factor: smallFactor },
-		{ id: "beginner-2", factor: smallFactor },
-		{ id: "CSharpSign", factor: smallFactor },
-		{ id: "SQLSign", factor: smallFactor },
-		{ id: "vbnetSign", factor: smallFactor },
-		{ id: "javaSign", factor: smallFactor },
-		{ id: "javascriptsign", factor: smallFactor },
-		{ id: "ccplusplusSign", factor: smallFactor },
+        { id: "roadLines", factor: smallFactor },
+        { id: "sky", factor: smallFactor },
+        { id: "fireHydrant-0", factor: smallFactor },
+        { id: "streetLight-0", factor: smallFactor },
+        { id: "circulationLight-0", factor: smallFactor },
+        { id: "versatileSoftwareEngineerBanner", factor: smallFactor },
+        { id: "codeSign", factor: smallFactor },
+        { id: "databasesSign", factor: smallFactor },
+        { id: "requirementsAnalysisSign", factor: smallFactor },
+        { id: "testAutomationSign", factor: smallFactor },
+        { id: "cookingSign", factor: smallFactor },
+        { id: "ironBar-1", factor: smallFactor },
+        { id: "ironBar-2", factor: smallFactor },
+        { id: "ironBar-3", factor: smallFactor },
+        { id: "ironBar-4", factor: smallFactor },
+        { id: "expert", factor: smallFactor },
+        { id: "advanced", factor: smallFactor },
+        { id: "intermediate", factor: smallFactor },
+        { id: "beginner", factor: smallFactor },
+        { id: "tallguy", factor: smallFactor },
+        { id: "tallText", factor: smallFactor },
+        { id: "openSwimText", factor: smallFactor },
+        { id: "openSwimSign", factor: smallFactor },
+        { id: "kayakerText", factor: smallFactor },
+        { id: "kayakerSign", factor: smallFactor },
+        { id: "programmingLanguageBanner", factor: smallFactor },
+        { id: "ironBar-5", factor: smallFactor },
+        { id: "ironBar-6", factor: smallFactor },
+        { id: "ironBar-7", factor: smallFactor },
+        { id: "ironBar-8", factor: smallFactor },
+        { id: "expert-2", factor: smallFactor },
+        { id: "advanced-2", factor: smallFactor },
+        { id: "intermediate-2", factor: smallFactor },
+        { id: "beginner-2", factor: smallFactor },
+        { id: "CSharpSign", factor: smallFactor },
+        { id: "SQLSign", factor: smallFactor },
+        { id: "vbnetSign", factor: smallFactor },
+        { id: "javaSign", factor: smallFactor },
+        { id: "javascriptsign", factor: smallFactor },
+        { id: "ccplusplusSign", factor: smallFactor },
         { id: "workExperienceBanner", factor: smallFactor },
-		{ id: "truck", factor: bigFactor },
-		{ id: "udesConsultat", factor: bigFactor },
-		{ id: "truck-2", factor: bigFactor },
-		{ id: "databaseLoader", factor: bigFactor },
-		{ id: "truck-3", factor: bigFactor },
-		{ id: "smusInternship", factor: bigFactor },
-		{ id: "truck-4", factor: bigFactor },
-		{ id: "desjardinsInternship", factor: bigFactor },
-		{ id: "finishLine", factor: smallFactor },
-		{ id: "finishLinePole", factor: smallFactor },
-	    { id: "socialIcons", factor: smallFactor }
+        { id: "truck", factor: bigFactor },
+        { id: "udesConsultat", factor: bigFactor },
+        { id: "truck-2", factor: bigFactor },
+        { id: "databaseLoader", factor: bigFactor },
+        { id: "truck-3", factor: bigFactor },
+        { id: "smusInternship", factor: bigFactor },
+        { id: "truck-4", factor: bigFactor },
+        { id: "desjardinsInternship", factor: bigFactor },
+        { id: "finishLine", factor: smallFactor },
+        { id: "finishLinePole", factor: smallFactor },
+        { id: "socialIcons", factor: smallFactor }
     ];
     _.each(objects, function (object) {
         addElement(object.id, object.factor);
@@ -227,13 +239,6 @@ function moveDivs(tempX) {
                     document.getElementById("testAutomationSign").style.bottom = "30px";
                     if (tempX > 4100) {
                         document.getElementById("cookingSign").style.bottom = "-280px";
-                        if (tempX > 4490) {
-                            if (!hammerGuyAnimationStarted) {
-                                document.getElementById("cobolSign").style.bottom = "-180px";
-                                recursiveHammerGuyAnimation();
-                                hammerGuyAnimationStarted = true;
-                            }
-                        }
                     }
                 }
             }
@@ -282,48 +287,6 @@ function moveDivs(tempX) {
     }
 }
 
-//Could not use conventional css transition on jquery animate with this kind of project
-function recursiveHammerGuyAnimation() {
-    if (objectArray[0][1] > objectArray[1][1] + 65) { //Element at index 0 of objectArray is hammerGuy and at index 1 is cobolsign
-        setTimeout(function () {
-            objectArray[0][1] = objectArray[0][1] - 15;
-            var yourDivPositionX = objectArray[0][1] - objectArray[0][2] * lastTempX;;
-            objectArray[0][0].style.left = yourDivPositionX + "px";
-            recursiveHammerGuyAnimation();
-        }, 25);
-    }
-    else {
-        document.getElementById("cobolSign").style.transition = "bottom .05s linear";
-        setTimeout(function () {
-            document.getElementById("cobolSign").style.bottom = (parseInt($("#cobolSign").css('bottom')) - 35) + "px";
-            setTimeout(function () {
-                document.getElementById("cobolSign").style.bottom = (parseInt($("#cobolSign").css('bottom')) - 35) + "px";
-                setTimeout(function () {
-                    setTimeout(function () {
-                        document.getElementById("cobolSign").style.bottom = (parseInt($("#cobolSign").css('bottom')) - 35) + "px";
-                    }, 1700);
-                    document.getElementById("cobolSign").style.transition = "bottom .3s linear";
-                    document.getElementById("cobolSign").style.bottom = (parseInt($("#cobolSign").css('bottom')) - 240) + "px";
-                    setTimeout(function () {
-                        recursiveHammerGuyAnimationSecondPart();
-                    }, 1000);                    
-                }, 1700);
-            }, 1700);
-        }, 300);
-    }
-}
-
-function recursiveHammerGuyAnimationSecondPart() {
-    if (objectArray[0][1] > -600) { //Element at index 0 of objectArray is hammerGuy and at index 1 is cobolsign
-        setTimeout(function () {
-            objectArray[0][1] = objectArray[0][1] - 15;
-            var yourDivPositionX = objectArray[0][1] - objectArray[0][2] * lastTempX;;
-            objectArray[0][0].style.left = yourDivPositionX + "px";
-            recursiveHammerGuyAnimationSecondPart();
-        }, 25);
-    }
-}
-
 /**
  * Function description missing
  */
@@ -336,6 +299,7 @@ function resizeEventHandler() {
 
     $("#carSmoke").css({
         position: "fixed",
+        left: (pos.left - 32) + "px",
         bottom: (pos.bottom + 25) + "px"
     }).show();
 }
